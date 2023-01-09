@@ -10,8 +10,9 @@ import {
 } from "../../assets";
 import "./style.css";
 
-const FixFooter = () => {
+const FixFooter = ({ trackIndex }) => {
   const [slideUp, setSlideUp] = useState(false);
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(trackIndex);
 
   return (
     <div className={`fix-footer ${slideUp ? "active" : ""}`}>
